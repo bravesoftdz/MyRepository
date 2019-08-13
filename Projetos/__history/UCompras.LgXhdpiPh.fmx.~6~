@@ -1,0 +1,49 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    Sizes = (
+      450s
+      695s
+      450s
+      695s)
+    inherited TabItem1: TTabItem
+      ExplicitSize.cx = 216.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited ToolBar2: TToolBar [0]
+        Size.Width = 450.000000000000000000
+        inherited Label2: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited MultiView1: TMultiView [1]
+        Visible = False
+        inherited ImageViewer1: TImageViewer
+          Viewport.Width = 250.000000000000000000
+          Viewport.Height = 89.000000000000000000
+        end
+        inherited ListBox1: TListBox
+          Viewport.Width = 250.000000000000000000
+          Viewport.Height = 343.000000000000000000
+        end
+      end
+    end
+    inherited TabItem2: TTabItem
+      ExplicitSize.cx = 108.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited ListView1: TListView
+        Size.Width = 430.000000000000000000
+        Size.Height = 627.000000000000000000
+      end
+      inherited ToolBar1: TToolBar
+        Size.Width = 450.000000000000000000
+        inherited btVoltar: TButton
+          OnClick = nil
+        end
+      end
+    end
+  end
+end
