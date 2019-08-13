@@ -1,0 +1,34 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited ToolBar1: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Label1: TLabel
+      ControlType = Platform
+    end
+    inherited ButtonAdd: TButton
+      ControlType = Platform
+      Position.X = 397.000000000000000000
+    end
+    inherited ButtonDelete: TButton
+      ControlType = Platform
+    end
+  end
+  inherited ListView1: TListView
+    Size.Width = 430.000000000000000000
+    Size.Height = 569.000000000000000000
+    ControlType = Platform
+  end
+  inherited ToolBar2: TToolBar
+    ControlType = Platform
+    Position.Y = 642.000000000000000000
+    Size.Width = 440.000000000000000000
+    inherited Label2: TLabel
+      AutoSize = False
+      AutoTranslate = False
+      Size.Width = 179.000000000000000000
+      Size.Height = 17.000000000000000000
+    end
+  end
+end
