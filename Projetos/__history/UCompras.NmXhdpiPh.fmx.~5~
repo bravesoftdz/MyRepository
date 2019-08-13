@@ -1,0 +1,87 @@
+inherited Form1_NmXhdpiPh: TForm1_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    Sizes = (
+      400s
+      615s
+      400s
+      615s)
+    inherited TabItem1: TTabItem
+      ExplicitSize.cx = 216.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited ToolBar2: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited Label2: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited Label3: TLabel
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.Y = 168.000000000000000000
+        Size.Width = 65.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Label4: TLabel
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.Y = 248.000000000000000000
+        Size.Width = 49.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Edit1: TEdit
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        TextSettings.FontColor = claSkyblue
+        Position.X = 96.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 265.000000000000000000
+        StyledSettings = [Family, Size, Style]
+      end
+      inherited Edit2: TEdit
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        TextSettings.FontColor = claSkyblue
+        Position.X = 96.000000000000000000
+        Position.Y = 232.000000000000000000
+        Size.Width = 273.000000000000000000
+        StyledSettings = [Family, Size, Style]
+      end
+      inherited SpeedButton2: TSpeedButton
+        Position.X = 48.000000000000000000
+        Position.Y = 416.000000000000000000
+        StyleLookup = 'speedbuttonstyle'
+        TextSettings.Font.StyleExt = {00070000000100000004000000}
+        TextSettings.FontColor = claWhite
+      end
+      inherited SpeedButton3: TSpeedButton
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited MultiView1: TMultiView
+        Visible = False
+        inherited ImageViewer1: TImageViewer
+          Viewport.Width = 250.000000000000000000
+          Viewport.Height = 89.000000000000000000
+        end
+        inherited ListBox1: TListBox
+          Viewport.Width = 250.000000000000000000
+          Viewport.Height = 343.000000000000000000
+        end
+      end
+    end
+    inherited TabItem2: TTabItem
+      ExplicitSize.cx = 108.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited ListView1: TListView
+        Size.Width = 380.000000000000000000
+        Size.Height = 547.000000000000000000
+      end
+      inherited ToolBar1: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited ButtonAdd: TButton
+          Position.X = 347.000000000000000000
+        end
+      end
+    end
+  end
+end
