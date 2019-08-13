@@ -1,0 +1,94 @@
+inherited Form1_NmXhdpiPh: TForm1_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited TabControl: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    Sizes = (
+      400s
+      615s
+      400s
+      615s
+      400s
+      615s
+      400s
+      615s
+      400s
+      615s)
+    inherited TabItem1: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar2: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited Label2: TLabel
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited Label3: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Label4: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited btLogin: TSpeedButton
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+      end
+      inherited MultiView1: TMultiView
+        inherited ImageViewer1: TImageViewer
+          Viewport.Width = 250.000000000000000000
+          Viewport.Height = 89.000000000000000000
+        end
+        inherited ListBox1: TListBox
+          Viewport.Width = 250.000000000000000000
+          Viewport.Height = 343.000000000000000000
+        end
+      end
+    end
+    inherited TabItem2: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ListView1: TListView
+        Size.Width = 380.000000000000000000
+        Size.Height = 547.000000000000000000
+      end
+      inherited ToolBar1: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited ButtonAdd: TButton
+          Position.X = 347.000000000000000000
+          Size.Height = 38.000000000000000000
+        end
+        inherited btVoltar: TButton
+          Size.Height = 38.000000000000000000
+        end
+      end
+    end
+    inherited TabItem3: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar3: TToolBar
+        Size.Width = 400.000000000000000000
+        inherited SpeedButton3: TSpeedButton
+          Position.X = 352.000000000000000000
+        end
+      end
+      inherited SpeedButton1: TSpeedButton
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited TabItem4: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar5: TToolBar
+        Size.Width = 400.000000000000000000
+      end
+    end
+    inherited TabItem5: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited ToolBar4: TToolBar
+        Size.Width = 400.000000000000000000
+      end
+    end
+  end
+end
