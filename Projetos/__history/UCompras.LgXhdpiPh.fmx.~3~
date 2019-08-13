@@ -1,0 +1,30 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited ToolBar1: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Label1: TLabel
+      ControlType = Platform
+    end
+    inherited ButtonAdd: TButton
+      ControlType = Platform
+      Position.X = 397.000000000000000000
+    end
+  end
+  inherited ListView1: TListView
+    Size.Width = 430.000000000000000000
+    Size.Height = 627.000000000000000000
+    ControlType = Platform
+  end
+  inherited MultiView1: TMultiView
+    inherited ListBox1: TListBox
+      Viewport.Width = 250.000000000000000000
+      Viewport.Height = 220.000000000000000000
+    end
+    inherited ImageViewer1: TImageViewer
+      Viewport.Width = 250.000000000000000000
+      Viewport.Height = 105.000000000000000000
+    end
+  end
+end
