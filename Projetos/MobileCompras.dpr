@@ -3,7 +3,8 @@ program MobileCompras;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  UCompras in 'UCompras.pas' {Form1};
+  UCompras in 'UCompras.pas' {Form1},
+  Loading in 'Loading.pas';
 
 {$R *.res}
 
