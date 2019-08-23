@@ -41,7 +41,7 @@ type
     ActionList1: TActionList;
     ChangeTab: TChangeTabAction;
     ListBox1: TListBox;
-    ListBoxItem2: TListBoxItem;
+    ListBoxItem1: TListBoxItem;
     ToolBar2: TToolBar;
     Label2: TLabel;
     BTMultiview: TSpeedButton;
@@ -52,26 +52,26 @@ type
     Label12: TLabel;
     Label13: TLabel;
     ImageViewer2: TImageViewer;
-    Circle1: TCircle;
-    Layout11: TLayout;
-    Rectangle1: TRectangle;
-    AnimaMenu: TFloatAnimation;
-    ImageViewer4: TImage;
-    ImageViewer3: TImage;
+    Brush1: TBrushObject;
+    Layout1: TLayout;
     procedure ButtonAddClick(Sender: TObject);
     procedure ListView1ItemClick(const Sender: TObject;
-      const AItem: TListViewItem);
+    const AItem: TListViewItem);
     procedure ButtonDeleteClick(Sender: TObject);
     procedure FDConnectionComprasBeforeConnect(Sender: TObject);
     procedure ListBoxItem1Click(Sender: TObject);
     procedure ListBoxItem2Click(Sender: TObject);
     procedure btVoltarClick(Sender: TObject);
     procedure btVoltaPrincipalClick(Sender: TObject);
+    procedure ButtonAddMouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure ButtonAddMouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure ListBoxItem1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure ListBoxItem1MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
     procedure BTMultiviewClick(Sender: TObject);
-    procedure Circle1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure ImageViewer3Click(Sender: TObject);
-    procedure ImageViewer4Click(Sender: TObject);
 
 
 
@@ -80,25 +80,32 @@ type
     { Private declarations }
     procedure EntradaProduto(const md: TModalResult; const produtos:array of string);
 
+    //variaveis da calculadora
+
+
+
 
 
 
   public
-    { Public declarations }
+
+
+
   end;
 
 var
   Form1: TForm1;
 
+
 implementation
 
 {$R *.fmx}
 
-uses  System.IOUtils;
-
-procedure TForm1.BTMultiviewClick(Sender: TObject);
+uses  System.IOUtils, Loading;
+ procedure TForm1.BTMultiviewClick(Sender: TObject);
 begin
-  layout11.Visible := false;
+      Layout1.Visible := True;
+      Layout4.Visible := True
 end;
 
 procedure TForm1.btVoltaPrincipalClick(Sender: TObject);
@@ -118,6 +125,18 @@ var descricao : array [0..0] of string;
 begin
   descricao[0] := String.Empty;
   InputQuery('Cadastre um Produto',['Produto:'],descricao,Self.EntradaProduto);
+end;
+
+procedure TForm1.ButtonAddMouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+    ButtonAdd.Opacity := 0.5;
+end;
+
+procedure TForm1.ButtonAddMouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  ButtonAdd.Opacity := 1;
 end;
 
 procedure TForm1.ButtonDeleteClick(Sender: TObject);
@@ -142,17 +161,6 @@ begin
   end;
 end;
 
-procedure TForm1.Circle1Click(Sender: TObject);
-begin
-      Layout11.Position.Y  := Form1.Height + 20;
-      Layout11.Visible     := True;
-
-      AnimaMenu.Inverse   := false;
-      AnimaMenu.StartValue := Form1.Height + 20;
-      AnimaMenu.StopValue := 0;
-      AnimaMenu.Start;
-end;
-
 procedure TForm1.EntradaProduto(const md: TModalResult;
   const produtos: array of string);
 Var descricao :String;
@@ -169,7 +177,6 @@ begin
       FDQueryDescricao.Close();
       FDQueryDescricao.Open();
       ButtonDelete.Visible := ListView1.Selected <> nil;
-      ShowMessage('Produto inserido com sucesso!');
       End;
 
   except
@@ -189,36 +196,43 @@ begin
 {$ENDIF}
 end;
 
-procedure TForm1.FormCreate(Sender: TObject);
-begin
-  layout11.Visible := false;
-end;
-
-
-
-procedure TForm1.ImageViewer3Click(Sender: TObject);
-begin
-      AnimaMenu.Inverse   := true;
-       AnimaMenu.Start;
-end;
-
-procedure TForm1.ImageViewer4Click(Sender: TObject);
-begin
-      AnimaMenu.Inverse   := true;
-       AnimaMenu.Start;
-end;
-
 procedure TForm1.ListBoxItem1Click(Sender: TObject);
 begin
  ChangeTab.Tab := TabItem1;
- ChangeTab.ExecuteTarget(self);
- Multiview1.HideMaster;
+  ChangeTab.ExecuteTarget(self);
+    Multiview1.HideMaster;
+end;
+
+procedure TForm1.ListBoxItem1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  ListBoxItem1.Opacity := 0.5;
+end;
+
+procedure TForm1.ListBoxItem1MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  ListBoxItem1.Opacity := 1;
 end;
 
 procedure TForm1.ListBoxItem2Click(Sender: TObject);
 begin
- ChangeTab.Tab := TabItem2;
- ChangeTab.ExecuteTarget(self);
+
+      FDQueryDescricao.Open();
+      ChangeTab.Tab := TabItem2;
+      ChangeTab.ExecuteTarget(self);
+
+       TLoading.Show(Form1, 'Carregando...');
+
+      TThread.CreateAnonymousThread(procedure
+      begin
+
+            TThread.Synchronize(nil, procedure
+            begin
+               TLoading.Hide;
+            end);
+
+      end).Start;
 
 end;
 
